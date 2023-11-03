@@ -1,0 +1,20 @@
+name: paleots
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - cartopy=0.21.0
+  - jupyter
+  - xarray
+  - netCDF4
+  - Bottleneck
+  - dask
+  - climlab
+  - pip
+  - jupyter
+  - python=3.10
+  - jupyter=1.0.0
+  - jupyterlab=3.5.2
+  - pip:
+    - pyleoclim
+    - git+https://github.com/fzhu2e/cfr.git@main
