@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Welcome to your Jupyter Book &#8212; Reproducing the Hockey Stick - Proxy composite over the past 2,000 years using the cfr package</title>
+    <title>Proxy Composite using the CFR toolbox &#8212; Reproducing the Hockey Stick - Proxy composite over the past 2,000 years using the cfr package</title>
   
   
   
@@ -162,7 +162,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1 current active">
                 <a class="reference internal" href="#">
-                    Welcome to your Jupyter Book
+                    Proxy Composite using the CFR toolbox
                 </a>
             </li>
         </ul>
@@ -338,7 +338,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -349,11 +351,22 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Welcome to your Jupyter Book</h1>
+    <h1>Proxy Composite using the CFR toolbox</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#motivation">Motivation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#authors">Authors</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contributors">Contributors</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#structure">Structure</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -363,17 +376,35 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="welcome-to-your-jupyter-book">
-<h1>Welcome to your Jupyter Book<a class="headerlink" href="#welcome-to-your-jupyter-book" title="Permalink to this heading">#</a></h1>
-<p>This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out <a class="reference external" href="https://jupyterbook.org">the Jupyter Book documentation</a> for more information.</p>
-<p>Check out the content pages bundled with this sample book to see more.</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="HockeyStick.html">ClimateDISK: Hockey stick</a></li>
+  <p><span class="xref myst"><img alt="license" src="https://img.shields.io/github/license/khider/DISK-proxyComposite.svg" /></span></p>
+<section class="tex2jax_ignore mathjax_ignore" id="proxy-composite-using-the-cfr-toolbox">
+<h1>Proxy Composite using the CFR toolbox<a class="headerlink" href="#proxy-composite-using-the-cfr-toolbox" title="Permalink to this heading">#</a></h1>
+<p>This repository contains a notebook and associated instrumental data to create a proxy composite for the past 2,000 years using the <a class="reference external" href="https://fzhu2e.github.io/cfr">cfr</a> Python Package. The proxy data comes from a <a class="reference external" href="https://linkedearth.graphdb.mint.isi.edu">GraphDB</a> with the following query:</p>
+<ul class="simple">
+<li><p>Datasets from the <a class="reference external" href="https://lipdverse.org/project/pages2k/">PAGES2k</a> and <a class="reference external" href="https://lipdverse.org/project/iso2k/">iso2k</a> compilations.</p></li>
+<li><p>Variables that represent temperature.</p></li>
 </ul>
+<p>The rest of the query allows to make the appropriate figures.</p>
+<section id="motivation">
+<h2>Motivation<a class="headerlink" href="#motivation" title="Permalink to this heading">#</a></h2>
+<p>Proxy records are important to assess the uniqueness of the current warming trend in its geological context. This notebooks allows updating the original “hockey stick” reconstruction with newly available datasets.</p>
+</section>
+<section id="authors">
+<h2>Authors<a class="headerlink" href="#authors" title="Permalink to this heading">#</a></h2>
+<p>Deborah Khider</p>
+</section>
+<section id="contributors">
+<h2>Contributors<a class="headerlink" href="#contributors" title="Permalink to this heading">#</a></h2>
+<a href="https://github.com/khider/DISK-proxyComposite/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=khider/DISK-proxyComposite" />
+</a>
+<p>Made with <a class="reference external" href="https://contrib.rocks">contrib.rocks</a>.</p>
+</section>
+<section id="structure">
+<h2>Structure<a class="headerlink" href="#structure" title="Permalink to this heading">#</a></h2>
+<p>This repository contains one notebook (<code class="docutils literal notranslate"><span class="pre">HockeyStick.ipynb</span></code>) along with the calibration data and several <code class="docutils literal notranslate"><span class="pre">.csv</span></code> files that represent a thesaurus for the various archive and proxy observations. This is only necessary for the figures but may need to be updated as new datasets are added.</p>
+</section>
+<div class="toctree-wrapper compound">
 </div>
 </section>
 
@@ -422,6 +453,23 @@ It does not go in-depth into any particular topic - check out <a class="referenc
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#motivation">Motivation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#authors">Authors</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contributors">Contributors</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#structure">Structure</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
