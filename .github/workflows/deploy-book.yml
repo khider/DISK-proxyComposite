@@ -1,0 +1,37 @@
+name: Deploy Jupyter Book
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: gh-pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # Notebooks are not executed (execute_notebooks: 'off'), so only
+      # Jupyter Book itself is needed to render the stored outputs.
+      - name: Install Jupyter Book v1
+        run: pip install "jupyter-book<2"
+
+      - name: Build the book
+        run: jupyter-book build proxycomposite
+
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./proxycomposite/_build/html
