@@ -6,3 +6,6 @@
 .ipynb_checkpoints/ProxyComposites-checkpoint.ipynb
 .ipynb_checkpoints/HockeyStick-checkpoint.ipynb
 .ipynb_checkpoints/QueryingLinkedEarthDB-checkpoint.ipynb
+
+# Jupyter Book build output
+_build/
